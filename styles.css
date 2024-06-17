@@ -10,12 +10,12 @@
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #3498db; /* Blue background color */
+    overflow-x: hidden;
+    background-color: #3498db; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure full viewport height */
+    min-height: 100vh; 
     background-image: url('intro-1.jpg');
     background-size: cover;
     background-position: center;
@@ -39,7 +39,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #2980b9; /* Darker blue for navbar */
+    background-color: #2980b9; 
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -56,7 +56,7 @@ body {
 }
 
 .navbar a:hover, .navbar a.active {
-    background-color: #9febdc; /* Light green on hover/active */
+    background-color: #9febdc; 
 }
 
 /* Content Container */
