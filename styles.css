@@ -1,0 +1,158 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #3498db; /* Blue background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-image: url('intro-1.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 30s infinite;
+}
+
+@keyframes slideShow {
+    0% { background-image: url('back-01.jpg'); }
+    33% { background-image: url('h.png'); }
+    66% { background-image: url('intro-1.jpg'); }
+    100% { background-image: url('h.png'); }
+}
+
+/* Blue background container */
+.blue-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2980b9; /* Darker blue for navbar */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #9febdc; /* Light green on hover/active */
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust max width as needed */
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Centered Content */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px; /* Limit centered content width */
+}
+
+/* Slideshow */
+.slideshow {
+    margin-top: 50px; /* Adjust top margin for spacing */
+    max-width: 600px; /* Limit slideshow width */
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%; /* Full width for each slide */
+    height: 300px; /* Adjust slide height */
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+/* Scroll down to Register */
+.scroll-down {
+    margin-top: 20px; /* Adjust margin top for spacing */
+}
+
+.scroll-down a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.scroll-down a:hover {
+    text-decoration: underline;
+}
+
+/* Register Section */
+.register {
+    margin-top: 50px; /* Adjust top margin for spacing */
+    flex: 0 0 300px; /* Fixed width for register section */
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.register h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.register button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register button:hover {
+    background-color: #2980b9;
+}
+
+.register button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.register button a:hover {
+    color: #ecf0f1;
+}
