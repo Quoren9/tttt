@@ -1,88 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <title>Responsive Registration Form</title> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TWTL</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <header>Membership Form</header>
-
-        <form action="form.php">
-            <div class="form first">
-                <div class="details personal">
-                    <span class="title">Personal Details</span>
-
-                    <div class="fields">
-                        <div class="input-field">
-                            <label>Name</label>
-                            <input type="text" placeholder="Enter your name" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Date of Birth</label>
-                            <input type="date" placeholder="Enter birth date" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>Gender</label>
-                            <select required>
-                                <option disabled selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Others</option>
-                            </select>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Education</label>
-                            <input type="text" placeholder="Enter your education" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>Country</label>
-                            <input type="text" placeholder="Enter country" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>State</label>
-                            <input type="text" placeholder="Enter state" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>City</label>
-                            <input type="text" placeholder="Enter city" required>
-                        </div>
-
-                        <div class="input-field">
-                            <label>Dream</label>
-                            <input type="text" placeholder="Enter your dream" required>
-                        </div>
-                        
-                        <div class="input-field">
-                            <label>Occupation</label>
-                            <input type="text" placeholder="Enter occupation" required>
-                        </div>
-                        
-                        <button class="submit">
-                            <span class="btnText">Submit</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div>
-
-                    <button class="nextBtn">
-                        <span class="btnText">Next</span>
-                        <i class="uil uil-navigator"></i>
-                    </button> 
-                </div> 
+    <div class="main">
+        <div class="navbar" id="myNavbar">
+            <a href="#" onclick="showContent('home')" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#" onclick="showContent('about')">About us</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showContent('Mission')">Our Mission</a>
+                    <a href="#" onclick="showContent('Team')">Our Team</a>
+                    <a href="#"onclick="showContent('History')">Our History</a>
+                </div>
             </div>
-        </form>
+            <a href="#" onclick="showContent('Membership')">Membership</a>
+            <a href="#" onclick="showContent('Events')">Event</a>
+            <a href="#" onclick="showContent('contact')">Contact us</a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">&#9776;</a>
+        </div>
+        <div class="container">
+            <div id="home" class="tabcontent visible">
+                <div class="content-home">
+                    <div class="content">
+                        <h1>Welcome to TWTL Membership</h1>
+                        <p>Join us to make a difference!</p>
+                        <button><a href="./Registration Form/index.html">click to Register</a></button>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="tabcontent hidden">
+ 
+            </div>
+            <div id="Membership" class="tabcontent hidden">
+                <p>Service content goes here</p>
+            </div>
+            <div id="Events" class="tabcontent hidden">
+                <p>Event content goes here</p>
+            </div>
+            <div id="contact" class="tabcontent hidden">
+                <p>Follow us on social media:</p>
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://twitter.com">Twitter</a>
+                <a href="https://instagram.com">Instagram</a>
+            </div>
+            <div id="Mission" class="tabcontent hidden">
+              <h2>About TWTL</h2>
+              <p>TWTL is a non-governmental philanthropic organization with the goal of ensuring consistency in sharing positive energy through humanitarian service, entrepreneurship training, and actualization of dreams.</p>
+              <h3>TWTL Scope</h3>
+              <p><strong>Humanitarian services:</strong> One of the prominent goals of TWTL is to harness the trends in this dispensation by playing a key role in the work against social issues like depression, racism, tribalism, and gender with public and private organizations.</p>
+              <p><strong>Entrepreneurship:</strong> Another major role of TWTL is harnessing talents through entrepreneurship programs. This is carried out through innovative ideas, problem-solving skills, and collaboration with public and private organizations.</p>
+              <p><strong>Education:</strong> TWTL values education. It helps students by contributing to their school needs and providing for the success of their academic pursuits. Some of these include school items like bags, books, uniforms, and sanitary pads for female students.</p>
+              <p><strong>Dream actualization:</strong> TWTL serves the purpose of bringing the impossible into possibilities. To enlighten young, youth, and aged on the imperative nature of having a dream, and developing dreams into reality.</p>
+            </div>
+            <div id="Team" class="tabcontent hidden">
+              <p>Our Team</p>
+            </div>
+            <div id="History" class="tabcontent hidden">
+              <p>Our History</p>
+            </div>
+        </div>
     </div>
-
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,34 +1,30 @@
-function showContent(section) {
-    // Get all tab content sections
-    var sections = document.querySelectorAll('.container .tabcontent');
-    
-    // Loop through all sections and hide them
-    sections.forEach(function(sec) {
-        sec.classList.remove('visible');
-        sec.classList.add('hidden');
-    });
-    
-    // Show the selected section
-    var selectedSection = document.getElementById(section);
-    selectedSection.classList.remove('hidden');
-    selectedSection.classList.add('visible');
-    
-    // Update active class on navbar links
-    var links = document.querySelectorAll('.navbar a');
-    links.forEach(function(link) {
-        link.classList.remove('active');
-    });
-    
-    // Add active class to the clicked link
-    var activeLink = document.querySelector('.navbar a[onclick="showContent(\'' + section + '\')"]');
-    activeLink.classList.add('active');
+function showContent(contentId) {
+  var i, tabcontent, tablinks;
+
+  // Hide all tabcontent
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].classList.add("hidden");
+      tabcontent[i].classList.remove("visible");
+  }
+
+  // Remove the active class from all links
+  tablinks = document.getElementsByClassName("navbar")[0].getElementsByTagName("a");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(contentId).classList.add("visible");
+  document.getElementById(contentId).classList.remove("hidden");
+  event.currentTarget.classList.add("active");
 }
 
 function toggleNavbar() {
-    var navbar = document.getElementById("myNavbar");
-    if (navbar.className === "navbar") {
-        navbar.className += " responsive";
-    } else {
-        navbar.className = "navbar";
-    }
+  var x = document.getElementById("myNavbar");
+  if (x.className === "navbar") {
+      x.className += " responsive";
+  } else {
+      x.className = "navbar";
+  }
 }

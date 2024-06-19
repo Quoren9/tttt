@@ -1,158 +1,123 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Body Styling */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #3498db; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; 
-    background-image: url('intro-1.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: slideShow 30s infinite;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes slideShow {
-    0% { background-image: url('back-01.jpg'); }
-    33% { background-image: url('h.png'); }
-    66% { background-image: url('intro-1.jpg'); }
-    100% { background-image: url('h.png'); }
-}
-
-/* Blue background container */
-.blue-background {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-/* Navbar Styling */
 .navbar {
-    background-color: #2980b9; 
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 .navbar a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: background-color 0.3s;
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.navbar a:hover, .navbar a.active {
-    background-color: #9febdc; 
+.navbar .icon {
+  display: none;
 }
 
-/* Content Container */
-.content-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Adjust max width as needed */
-    margin-top: 20px;
-    position: relative;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-/* Centered Content */
-.centered-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 800px; /* Limit centered content width */
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 37px;
 }
 
-/* Slideshow */
-.slideshow {
-    margin-top: 50px; /* Adjust top margin for spacing */
-    max-width: 600px; /* Limit slideshow width */
-    position: relative;
-    overflow: hidden;
+.dropdown .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.dropdown .dropdown-content a:hover {
+  background-color: #ddd;
 }
 
-.slide {
-    flex: 0 0 100%; /* Full width for each slide */
-    height: 300px; /* Adjust slide height */
-    background-size: cover;
-    background-position: center;
-    transition: opacity 0.5s ease-in-out;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-.active {
-    opacity: 1;
+.container {
+  padding: 16px;
 }
 
-/* Scroll down to Register */
-.scroll-down {
-    margin-top: 20px; /* Adjust margin top for spacing */
+.tabcontent {
+  display: none;
 }
 
-.scroll-down a {
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
+.tabcontent.visible {
+  display: block;
+}
+.content button a{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  color: brown;
+}
+.content button{
+  border: none;
+  width: 10%;
+  height: 60px;
+}
+.content button a:hover{
+  color: #e01b95;
+  max-width: 40%;
+  transition: 0.5s ease-in;
+}
+#contact a{
+  text-decoration: none;
+  font-weight: 800;
+  font: 300;
+  list-style: georgian;
+  width: 30%;
+  
+}
+#contact a:hover{
+  color: #e01b95;
 }
 
-.scroll-down a:hover {
-    text-decoration: underline;
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropdown-content a {
+      display: none;
+  }
+  .navbar a.icon {
+      float: right;
+      display: block;
+  }
 }
 
-/* Register Section */
-.register {
-    margin-top: 50px; /* Adjust top margin for spacing */
-    flex: 0 0 300px; /* Fixed width for register section */
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.register h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.register button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.register button:hover {
-    background-color: #2980b9;
-}
-
-.register button a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.register button a:hover {
-    color: #ecf0f1;
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropdown-content a {
+      display: block;
+  }
 }
