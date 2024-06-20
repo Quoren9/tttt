@@ -7,11 +7,13 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar a {
-  float: left;
-  display: block;
+  display: flex;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -92,7 +94,59 @@ body {
 #contact a:hover{
   color: #e01b95;
 }
+.contact-form{
+  margin: 20px;
+  flex-direction: column;
+  height: 70vh;
+}
 
+.contact-form input{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.contact-form input .formm textarea{
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 10px;
+  background: #555555;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.contact-form textarea{
+  resize: none;
+  height: 200px;
+  margin: 20px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+}
+.contact-form form .send{
+  display: inline-block;
+  padding: 12px 20px;
+  background: #def ;
+  font-size: 15px;
+  color: #2b812b;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0;
+  animation: slideTop 1s ease forwards ;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px rgb(135, 166, 197), 0 0 25px rgb(122, 179, 236);
+}
+.contact-form form .send:hover{
+  box-shadow: 0 0 05px cyan,
+  0 0 025px cyan, 0 0 25px cyan, 
+  0 0  25px cyan, 0 0 250px cyan;
+}
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child), .dropdown .dropdown-content a {
       display: none;
