@@ -2,37 +2,62 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins',sans-serif;
-  scroll-behavior: smooth;
 }
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: navy;
 }
 
+.main{
+  width: 100%;
+  height: 90%;
+}
+div{
+  font-weight: 400;
+  font-family: 'Poppins' sans-serif;
+}
 .navbar {
-  overflow: hidden;
   background-color: #258fe6;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 100%;
+  height: 55px;
+}
+.nav-tabs{
+  width: 25%;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
 }
 
-.navbar a {
+.navbar .nav-tabs a {
   display: flex;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 12px;
   text-decoration: none;
+  align-items: center;
 }
 
 .navbar .icon {
   display: none;
+  color: #555555;
 }
 .active{
-  background-color: #cc8400;
+  background-color: #2dd148;
 }
 
+.logo{
+  padding: 30px;
+  cursor: pointer;
+}
+.logo h3{
+  color: #f1eeeedd;
+  font-weight: 40px;
+}
 .dropdown {
   float: left;
   overflow: hidden;
@@ -49,7 +74,7 @@ body {
 }
 
 .dropdown .dropdown-content a {
-  float: left;
+  float: none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -91,11 +116,13 @@ margin-top: 15%;
   font-weight: 400;
   width: 100%;
   font-size: 40px;
+  margin: 20px;
 
 }
 .content-home .content p{
   color: #ddd;
   font-size: 30px;
+  margin: 20px;
 }
 .img-box{
   width: 20%;
@@ -905,6 +932,7 @@ button {
   box-shadow: 0 0 0 #fec1958c;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin-left: 30%;
 }
 
 .star-1 {
@@ -1042,21 +1070,7 @@ button:hover .star-6 {
 .fil0 {
   fill: #fffdef;
 }
-#about h2{
-  font-size: 20px;
-  color: #639bd1;
-}
-#about p{
-  color: #eef1ef;
-  font-size: 20px;
-  font-weight: 400;
-  margin: 20px;
-}
-#about h3{
-  font-size: 28px;
-  color: #7b4aea;
-  margin: 20px;
-}
+
 #contact a{
   text-decoration: none;
   font-weight: 800;
@@ -1089,7 +1103,7 @@ button:hover .star-6 {
   border-radius: 5px;
 }
 
-.contact-form input .formm textarea{
+.contact-form input .form textarea{
   border: none;
   outline: none;
   padding: 10px;
@@ -1105,6 +1119,7 @@ button:hover .star-6 {
   margin: 20px;
   width: 80%;
   border-radius: 5px;
+  padding: 10px;
 }
 .contact-form form .send{
   width: 20%;
@@ -1242,6 +1257,76 @@ button:hover .star-6 {
   background: #e4405f;
   color: #fff;
 }
+
+.card {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055); */
+  background: transparent;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child), .dropdown .dropdown-content a {
