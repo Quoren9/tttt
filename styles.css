@@ -1429,7 +1429,6 @@ button:hover .star-6 {
     flex-direction: column;
     margin: 20px;
     width: 70vh;
-    border: 1px solid black;
    }
    .contact-form input .form .message{
     width:80%;
