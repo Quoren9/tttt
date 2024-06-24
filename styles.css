@@ -1139,7 +1139,7 @@ button:hover .star-6 {
   padding: 10px;
 }
 .contact-form form .send{
-  width: 25%;
+  width: 30%;
   background: #def ;
   font-size: 10px;
   color: #2b812b;
@@ -1148,8 +1148,7 @@ button:hover .star-6 {
   font-weight: 500;
   animation: slideTop 1s ease forwards ;
   animation-delay: 2s;
-  margin-left: 15rem;
-  flex:end;
+  margin-left: 8rem;
   opacity: 1;
 
   box-shadow: 0 0 5px rgb(135, 166, 197), 0 0 25px rgb(122, 179, 236);
