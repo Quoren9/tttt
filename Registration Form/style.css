@@ -152,7 +152,7 @@ form .buttons button , .backBtn{
     margin-right: 14px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 480px) {
     .container form{
         overflow-y: scroll;
     }
@@ -164,8 +164,9 @@ form .buttons button , .backBtn{
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 834px) {
     form .fields .input-field{
-        width: 100%;
+        width: 80%;
+        align-items: center;
     }
 }
