@@ -1110,6 +1110,7 @@ button:hover .star-6 {
   width: 40%;
   height: 80vh;
   margin-right: 20px;
+  margin-bottom: 20px;
 
 }
 .contact-form input{
@@ -1136,20 +1137,22 @@ button:hover .star-6 {
   margin: 15px;
   width: 80%;
   border-radius: 5px;
-  padding: 10px;
+  padding: 5px;
 }
 .contact-form form .send{
   width: 30%;
   background: #def ;
-  font-size: 10px;
+  font-size: 20px;
   color: #2b812b;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 500;
   animation: slideTop 1s ease forwards ;
   animation-delay: 2s;
-  margin-left: 8rem;
+  margin-left: 15rem;
   opacity: 1;
+  text-align: center;
+  padding-left: 30px;
 
   box-shadow: 0 0 5px rgb(135, 166, 197), 0 0 25px rgb(122, 179, 236);
 }
@@ -1419,6 +1422,7 @@ button:hover .star-6 {
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 50px;
   }
   .nav-tabs{
     width: 100%;
@@ -1427,19 +1431,39 @@ button:hover .star-6 {
     display: block;
     flex-direction: column;
     margin: 20px;
-    width: 70vh;
+   }
+   .contact-form form{
+    width: 80%;
+    height: 90vh;
+    margin: 30px;
+    padding: 5px;
+    border: 1px solid black;
    }
    .contact-form input .form .message{
-    width:80%;
-    background: #555555;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-    resize: none;
-    padding: 10px;
+    width:50%;
+  
+  }
+  .send{
+    width: 70%;
+    padding: 5px;
+    align-content: center;
+    margin-left: 20px;
   }
   .contact-form input{
     width: 80%;
+  }
+  .contact-form p{
+    margin-top: 50px;
+  }
+  .social-link{
+    display: flex;
+    align-items: center;
+    size: 20px;
+  }
+  .tooltip{
+    size: 30px;
+    font: 300;
+    font-weight: 200;
   }
 
 }
