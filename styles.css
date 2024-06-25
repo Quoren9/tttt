@@ -1140,19 +1140,19 @@ button:hover .star-6 {
   padding: 5px;
 }
 .contact-form form .send{
-  width: 30%;
+  width: 27%;
   background: #def ;
-  font-size: 20px;
+  font-size: 15px;
   color: #2b812b;
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 500;
   animation: slideTop 1s ease forwards ;
   animation-delay: 2s;
-  margin-left: 15rem;
+  margin-left: 60%;
   opacity: 1;
   text-align: center;
-  padding-left: 30px;
+  padding-left: 10px;
 
   box-shadow: 0 0 5px rgb(135, 166, 197), 0 0 25px rgb(122, 179, 236);
 }
@@ -1437,7 +1437,6 @@ button:hover .star-6 {
     height: 90vh;
     margin: 30px;
     padding: 5px;
-    border: 1px solid black;
    }
    .contact-form input .form .message{
     width:50%;
