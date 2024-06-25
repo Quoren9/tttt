@@ -1,17 +1,30 @@
-const form = document.querySelector("form"),
-        nextBtn = form.querySelector(".nextBtn"),
-        backBtn = form.querySelector(".backBtn"),
-        allInput = form.querySelectorAll(".first input");
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    const inputs = document.querySelectorAll("input[required], select[required]");
 
+    form.addEventListener("submit", function(event) {
+        let valid = true;
 
-nextBtn.addEventListener("click", ()=> {
-    allInput.forEach(input => {
-        if(input.value != ""){
-            form.classList.add('secActive');
-        }else{
-            form.classList.remove('secActive');
+        inputs.forEach(input => {
+            if (!input.value) {
+                valid = false;
+                input.classList.add("error");
+            } else {
+                input.classList.remove("error");
+            }
+        });
+
+        if (!valid) {
+            event.preventDefault();
+            alert("Please fill in all required fields.");
         }
-    })
-})
+    });
 
-backBtn.addEventListener("click", () => form.classList.remove('secActive'));
+    inputs.forEach(input => {
+        input.addEventListener("input", function() {
+            if (input.value) {
+                input.classList.remove("error");
+            }
+        });
+    });
+});
