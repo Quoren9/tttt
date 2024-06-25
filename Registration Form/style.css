@@ -166,7 +166,7 @@ form .buttons button , .backBtn{
 
 @media (max-width: 834px) {
     form .fields .input-field{
-        width: 80%;
+        width: calc(100%/ 2 -10px);
         align-items: center;
     }
 }
