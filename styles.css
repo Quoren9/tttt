@@ -26,6 +26,9 @@ div{
   justify-content: space-between;
   width: 100%;
   height: 55px;
+  position: fixed;
+  z-index: 1;
+
 }
 .nav-tabs{
   width: 27%;
@@ -91,11 +94,12 @@ div{
 }
 
 .container {
-  padding: 16px;
+  padding: 40px;
 }
 
 .tabcontent {
-  display: none;
+  /* display: none; */
+  margin-bottom: 10%;
 }
 
 .tabcontent.visible {
@@ -1142,7 +1146,7 @@ button:hover .star-6 {
 .contact-form form .send{
   width: 27%;
   background: #def ;
-  font-size: 15px;
+  font-size: 20px;
   color: #2b812b;
   letter-spacing: 1px;
   text-decoration: none;
@@ -1186,11 +1190,12 @@ button:hover .star-6 {
   flex-direction: column;
 }
 .social-link p{
-  color: #fff;
+  color: #b4df1b;
   font-size: 30px;  
   align-items: center;
   padding: 5px;
   font: 400;
+  font-weight: 600;
 
 }
 .wrapper {
@@ -1348,7 +1353,18 @@ button:hover .star-6 {
   }
 }
 
-
+.top{
+  position: fixed;
+  bottom: 2.1rem;
+  right: 2.1rem;
+}
+.top i{
+  color: #000;
+  background: #6090f0;
+  font-size: 20%;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
 /* Media Queries */
 @media (max-width: 1200px) {
   .content-home .content h1 {
@@ -1356,6 +1372,26 @@ button:hover .star-6 {
   }
   .content-home .content p {
     font-size: 25px;
+  }
+  .contact-form{
+    display: block;
+    flex-direction: column;
+    margin: 20px;
+   }
+   .contact-form form{
+    width: 100%;
+    height: 90vh;
+    margin: 30px;
+    padding: 5px;
+   }
+   .contact-form input .form .message{
+    width:70%;
+  
+  }
+  .send{
+    width: 80%;
+    padding: 5px;
+    align-content: center;
   }
 }
 
@@ -1385,6 +1421,26 @@ button:hover .star-6 {
   .navbar .icon {
     display: block;
   }
+  .contact-form{
+    display: block;
+    flex-direction: column;
+    margin: 20px;
+   }
+   .contact-form form{
+    width: 100%;
+    height: 90vh;
+    margin: 30px;
+    padding: 5px;
+   }
+   .contact-form input .form .message{
+    width:70%;
+  
+  }
+  .send{
+    width: 80%;
+    padding: 5px;
+    align-content: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1402,8 +1458,25 @@ button:hover .star-6 {
     display: block;
     margin-right: 10px;
   }
+  .contact-form{
+    display: block;
+    flex-direction: column;
+    margin: 20px;
+   }
+   .contact-form form{
+    width: 100%;
+    height: 90vh;
+    margin: 30px;
+    padding: 5px;
+   }
+   .contact-form input .form .message{
+    width:70%;
+  
+  }
   .send{
-    width: 70%;
+    width: 80%;
+    padding: 5px;
+    align-content: center;
   }
 }
 
@@ -1429,6 +1502,7 @@ button:hover .star-6 {
   }
   .nav-tabs{
     width: 100%;
+    margin: 10px;
   }
    .contact-form{
     display: block;
@@ -1436,13 +1510,13 @@ button:hover .star-6 {
     margin: 20px;
    }
    .contact-form form{
-    width: 80%;
+    width: 100%;
     height: 90vh;
     margin: 30px;
     padding: 5px;
    }
    .contact-form input .form .message{
-    width:50%;
+    width:70%;
   
   }
   .send{
