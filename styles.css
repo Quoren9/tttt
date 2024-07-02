@@ -98,7 +98,7 @@ div{
 }
 
 .tabcontent {
-  /* display: none; */
+  display: none;
   margin-bottom: 10%;
 }
 

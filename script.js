@@ -14,7 +14,7 @@ function showContent(contentId) {
       tablinks[i].classList.remove("active");
   }
 
-  // Show the current tab, and add an "active" class to the link that opened the tab
+  // Show the curre"nt tab, and add an "active" class to the link that opened the tab
   document.getElementById(contentId).classList.add("visible");
   document.getElementById(contentId).classList.remove("hidden");
   event.currentTarget.classList.add("active");
